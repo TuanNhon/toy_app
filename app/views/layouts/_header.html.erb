@@ -1,11 +1,13 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "sample app", '#', id: "logo" %>
+    <%= link_to t(".sample"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   '#' %></li>
-        <li><%= link_to "Help",   '#' %></li>
-        <li><%= link_to "Log in", '#' %></li>
+        <li><%= link_to t(".home_page"), home_path %></li>
+        <li><%= link_to t(".about_page"), about_path %></li>
+        <li><%= link_to t(".help_page"), help_path %></li>
+        <li><%= link_to t(".contact_page"), contact_path %></li>
+        <li><%= link_to t(".signup_page"), signup_path %></li>
       </ul>
     </nav>
   </div>

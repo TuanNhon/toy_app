@@ -91,6 +91,7 @@ en:
       title_page: "Log in"
       email: "Email"
       password: "Password"
+      remember_me: "Remember me on this computer"
       login_page: "Log in"
       is_member: "New user?"
       signup_page: "Sign up now!"

@@ -8,10 +8,11 @@ rails:
   help: "http://www.railstutorial.org/help/" 
   author_blog: "http://www.michaelhartl.com/"
 valid:
-  name_length: 50
+  name_len: 50
   email_syntax: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/
-  email_length: 255
-  pwd_length: 6
+  email_len: 255
+  pwd_len: 6
 user:
   gravatar_size: 80
-  gravatar_url: "https://secure.gravatar.com/avatar/%{gravatar_id}?s=%{gravatar_size}"
+  gravatar_url: "https://secure.gravatar.com/avatar/%{gravatar_id}?s=
+    %{gravatar_size}"

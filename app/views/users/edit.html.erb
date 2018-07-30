@@ -1,6 +1,4 @@
-<h1>Editing User</h1>
-
-<%= render 'form', user: @user %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<h1><%= t ".title_page" %></h1>
+<%= render "form", user: @user %>
+<%= link_to t(".action_get"), @user %> |
+<%= link_to t(".users_index"), users_path %>

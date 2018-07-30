@@ -1,0 +1,9 @@
+rails:
+  home: "http://rubyonrails.org/"
+  news: "http://news.railstutorial.org/"
+  tuts: "http://www.railstutorial.org/"
+  book: "http://www.railstutorial.org/book/"
+  screencasts: "http://screencasts.railstutorial.org/"
+  contact: "http://www.railstutorial.org/contact/"
+  help: "http://www.railstutorial.org/help/" 
+  author_blog: "http://www.michaelhartl.com/"

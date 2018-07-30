@@ -12,3 +12,6 @@ valid:
   email_syntax: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/
   email_length: 255
   pwd_length: 6
+user:
+  gravatar_size: 80
+  gravatar_url: "https://secure.gravatar.com/avatar/%{gravatar_id}?s=%{gravatar_size}"

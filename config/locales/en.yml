@@ -68,3 +68,16 @@ en:
       label_email: "Email"
       users_index: "Back"
       action_edit: "Edit"
+    form:
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirm: "Confirmation"
+      button_signup: "Create my account"
+    welcome: "Welcome to the Sample App!"
+    success_update: "User was successfully updated."
+    success_destroy: "User was successfully destroyed."
+  shared:
+    error_messages:
+      error_begin: "The form contains"
+      error_content: "error"

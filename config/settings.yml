@@ -7,3 +7,8 @@ rails:
   contact: "http://www.railstutorial.org/contact/"
   help: "http://www.railstutorial.org/help/" 
   author_blog: "http://www.michaelhartl.com/"
+valid:
+  name_length: 50
+  email_syntax: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/
+  email_length: 255
+  pwd_length: 6

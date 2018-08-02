@@ -14,8 +14,12 @@ en:
       about_page: "About"
       help_page: "Help"
       contact_page: "Contact"
-      signup_page: "Sign Up"
-      login_page: "Login"
+      users_page: "Users"
+      account: "Account"
+      profile_page: "Profile"
+      setting_page: "Settings"
+      logout_page: "Log out"
+      login_page: "Log in"
   static_pages:
     about:
       the: "The"
@@ -47,6 +51,9 @@ en:
       signup_page: "Sign up now!"
       logo: "Rails logo"
   users:
+    welcome: "Welcome to the Sample App!"
+    success_update: "User was successfully updated."
+    success_destroy: "User was successfully destroyed."
     index:
       title_page: "Users"
       name: "Name"
@@ -74,10 +81,16 @@ en:
       password: "Password"
       password_confirm: "Confirmation"
       button_signup: "Create my account"
-    welcome: "Welcome to the Sample App!"
-    success_update: "User was successfully updated."
-    success_destroy: "User was successfully destroyed."
   shared:
     error_messages:
       error_begin: "The form contains"
       error_content: "error"
+  sessions:
+    mess_danger: "Invalid email/password combination"
+    new:
+      title_page: "Log in"
+      email: "Email"
+      password: "Password"
+      login_page: "Log in"
+      is_member: "New user?"
+      signup_page: "Sign up now!"

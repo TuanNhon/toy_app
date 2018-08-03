@@ -21,5 +21,6 @@ user:
     gravatar_size: 60
 records: 10
 example_email: "to@example.org"
+noreply_email: "noreply@example.com"
 password:
   default_location: "app/views/user_mailer/password_reset.html.erb"

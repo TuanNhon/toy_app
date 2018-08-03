@@ -50,8 +50,19 @@ en:
       content: "sample application."
       signup_page: "Sign up now!"
       logo: "Rails logo"
+  user_mailer:
+    account_activation:
+      subject: "Account Activation"
+      hi: "Hi"
+      action_active: "Active"
+      welcome:
+        text: "Welcome to the Sample App! Go to the link below to
+      activate your account"
+        html: "Welcome to the Sample App! Click on the link below to
+      activate your account"
   users:
-    welcome: "Welcome to the Sample App!"
+    welcome: "Welcome to the Sample App! Please check your email to activate
+      your account."
     success_update: "User was successfully updated."
     success_destroy: "User was successfully destroyed."
     login: "Please log in."
@@ -97,6 +108,8 @@ en:
       error_content: "error"
   sessions:
     mess_danger: "Invalid email/password combination"
+    not_actived: "Account not activated. Check your email for the activation 
+      link."
     new:
       title_page: "Log in"
       email: "Email"
@@ -114,3 +127,6 @@ en:
       hi: "Hi"
       subject: "Account activation"
       content: "find me in "
+  account_activations:
+    actived: "Account actived"
+    invalid_link: "Invalid activation link"

@@ -1,0 +1,7 @@
+<%= gravatar_for user, size: Settings.user.list.gravatar_size %>
+<%= user.name %><br>
+<%= user.email %><br>
+<%= link_to t(".action_get"), user %>
+<%= link_to t(".action_edit"), edit_user_path(user) %>
+<%= link_to t(".action_delete"), user, method: :delete, 
+  data: {confirm: t(".confirm_question")} %>

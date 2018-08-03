@@ -1,4 +1,14 @@
-<h1><%= t ".title_page" %></h1>
-<%= render "form", user: @user %>
-<%= link_to t(".action_get"), @user %> |
-<%= link_to t(".users_index"), users_path %>
+<% provide :title, t(".title_page") %>
+<% provide :button, t(".btn_edit") %>
+<h1><%= t ".title" %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= render "form", user: @user %>
+    <div class="gravatar_edit">
+      <%= gravatar_for @user %>
+      <%= link_to t(".change"), Settings.user.gravatar_url, target: :_blank,
+        rel: :noopener %>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,15 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
   VALID_EMAIL_REGEX = Settings.valid.email_syntax
+  scope :selected, -> {select :id, :name, :email}
+  scope :ordered, -> { order name: :asc}
   has_many :microposts
   before_save {email.downcase!}
   validates :name, presence: true, length: {maximum: Settings.valid.name_len}
   validates :email, presence: true, length: {maximum: Settings.valid.email_len},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
-  validates :password, presence: true, length: {minimum: Settings.valid.pwd_len}
+  validates :password, presence: true, allow_nil: true,
+    length: {minimum: Settings.valid.pwd_len}
   has_secure_password
 
   class << self

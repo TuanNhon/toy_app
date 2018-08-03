@@ -54,33 +54,41 @@ en:
     welcome: "Welcome to the Sample App!"
     success_update: "User was successfully updated."
     success_destroy: "User was successfully destroyed."
+    login: "Please log in."
+    error_permission: "You can't change profile of another"
+    updated: "Your profile is updated successfully"
     index:
       title_page: "Users"
       name: "Name"
       email: "Email"
-      action_get: "Show"
-      action_edit: "Edit"
-      action_delete: "Destroy"
       action_create: "New User"
       confirm_question: "Are you sure?"
     edit:
-      title_page: "Editing User"
-      action_get: "Show"
-      users_index: "Back"
+      title_page: "Edit user"
+      btn_edit: "Save"
+      title: "Update your profile"
+      change: "Change"
     new:
       title_page: "Sign Up"
+      btn_signup: "Create my account"
       users_index: "Back"
     show:
       label_name: "Name"
       label_email: "Email"
       users_index: "Back"
       action_edit: "Edit"
+      not_found: "User not found"
     form:
       name: "Name"
       email: "Email"
       password: "Password"
       password_confirm: "Confirmation"
-      button_signup: "Create my account"
+    form_edit:
+      btn_save: "Save changes"
+    user:
+      action_get: "Show"
+      action_edit: "Edit"
+      action_delete: "Destroy"
   shared:
     error_messages:
       error_begin: "The form contains"

@@ -14,5 +14,9 @@ valid:
   pwd_len: 6
 user:
   gravatar_size: 80
-  gravatar_url: "https://secure.gravatar.com/avatar/%{gravatar_id}?s=
+  gravatar_img: "https://secure.gravatar.com/avatar/%{gravatar_id}?s=
     %{gravatar_size}"
+  gravatar_url: "http://gravatar.com/emails"
+  list:
+    gravatar_size: 60
+records: 10

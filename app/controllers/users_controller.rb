@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
-  before_action :set_user, except: %i(new create index)
+  before_action :set_user, except: %i(new create index correct_user)
+  before_action :logged_in_user, only: [:index, :edit, :update]
+  before_action :correct_user, only: [:edit, :update]
 
   def index
-    @users = User.all
+    @users = User.selected.ordered
+      .paginate(page: params[:page], per_page: Settings.records)
   end
 
   def show; end
@@ -26,6 +29,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update user_params
+      flash[:success] = t ".updated"
       redirect_to @user
     else
       render :edit
@@ -38,12 +42,30 @@ class UsersController < ApplicationController
   end
 
   private
-    def set_user
-      @user = User.find_by id: params[:id]
+  def set_user
+    unless @user = User.find_by(id: params[:id])
+      flash[:danger] = t ".not_found"
+      redirect_to users_path
     end
+  end
 
-    def user_params
-      params.require(:user).permit :name, :email, :password,
-        :password_confirmation
+  def user_params
+    params.require(:user).permit :name, :email, :password,
+      :password_confirmation
+  end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = t ".login"
+      redirect_to login_url
     end
+  end
+
+  def correct_user
+    unless current_user? @user
+      flash[:danger] = t ".error_permission"
+      redirect_to root_url
+    end
+  end
 end

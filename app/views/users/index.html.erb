@@ -1,24 +1,13 @@
 <p id="notice"><%= notice %></p>
 <h1><%= t ".title_page" %></h1>
-<table>
-  <thead>
-    <tr>
-      <th><%= t ".name" %></th>
-      <th><%= t ".email" %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= link_to t(".action_get"), user %></td>
-        <td><%= link_to t(".action_edit"), edit_user_path(user) %></td>
-        <td><%= link_to t(".action_delete"), user, method: :delete, data: { confirm: t(".confirm_question") } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= will_paginate %>
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <%= render user %>
+    </li>
+  <% end %>
+</ul>
+<%= will_paginate %>
 <br>
 <%= link_to t(".action_create"), new_user_path %>

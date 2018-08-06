@@ -57,6 +57,7 @@ en:
     login: "Please log in."
     error_permission: "You can't change profile of another"
     updated: "Your profile is updated successfully"
+    deleted: "User deleted"
     index:
       title_page: "Users"
       name: "Name"
@@ -89,6 +90,7 @@ en:
       action_get: "Show"
       action_edit: "Edit"
       action_delete: "Destroy"
+      confirm_question: "Are you sure?"
   shared:
     error_messages:
       error_begin: "The form contains"

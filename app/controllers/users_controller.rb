@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, except: %i(new create index correct_user)
-  before_action :logged_in_user, only: [:index, :edit, :update]
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
+  before_action :admin_user, only: :destroy
 
   def index
     @users = User.selected.ordered
@@ -38,6 +39,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
+    flash[:success] = t ".deleted"
     redirect_to users_url
   end
 
@@ -53,7 +55,7 @@ class UsersController < ApplicationController
     params.require(:user).permit :name, :email, :password,
       :password_confirmation
   end
-
+  
   def logged_in_user
     unless logged_in?
       store_location
@@ -67,5 +69,9 @@ class UsersController < ApplicationController
       flash[:danger] = t ".error_permission"
       redirect_to root_url
     end
+  end
+
+  def admin_user
+    redirect_to root_url unless current_user.admin?
   end
 end

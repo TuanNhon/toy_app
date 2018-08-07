@@ -6,10 +6,13 @@ class UsersController < ApplicationController
 
   def index
     @users = User.selected.ordered
-      .paginate page: params[:page], per_page: Settings.records
+      .paginate page: params[:page], per_page: Settings.user.records
   end
 
-  def show; end
+  def show
+    @microposts = @user.microposts
+      .paginate page: params[:page], per_page: Settings.micropost.records
+  end
 
   def new
     @user = User.new
@@ -55,7 +58,7 @@ class UsersController < ApplicationController
     params.require(:user).permit :name, :email, :password,
       :password_confirmation
   end
-  
+
   def logged_in_user
     unless logged_in?
       store_location

@@ -17,6 +17,8 @@ gem "jquery-rails", "~> 4.3", ">= 4.3.1"
 gem "faker", "1.9.1"
 gem "will_paginate", "3.1.6"
 gem "bootstrap-will_paginate", "1.0.0"
+gem "carrierwave", "1.2.3"
+gem "mini_magick", "4.8.0"
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
 end

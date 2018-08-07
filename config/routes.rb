@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   post "/signup", to: "users#create"
   delete "/logout", to: "sessions#destroy"
-  resources :microposts
+  resources :microposts, only: %i(create destroy)
   resources :users
   resources :account_activations, only: %i(edit)
+  resources :password_resets, only: %i(new create edit update)
 end

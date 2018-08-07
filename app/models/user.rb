@@ -1,9 +1,9 @@
 class User < ApplicationRecord
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
   VALID_EMAIL_REGEX = Settings.valid.email_syntax
   scope :selected, -> {select :id, :name, :email}
   scope :ordered, -> {order name: :asc}
-  has_many :microposts
+  has_many :microposts, dependent: :destroy
   before_save :downcase_email
   before_create :create_activation_digest
   validates :name, presence: true, length: {maximum: Settings.valid.name_len}
@@ -47,6 +47,24 @@ class User < ApplicationRecord
 
   def activate
     update_columns activated: true, activated_at: Time.zone.now
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns reset_digest: User.digest(reset_token),
+      reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+
+  def feed
+    Micropost.where(user_id: id)
   end
 
   private

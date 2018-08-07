@@ -105,3 +105,12 @@ en:
       login_page: "Log in"
       is_member: "New user?"
       signup_page: "Sign up now!"
+  user_mailer:
+    account_activation:
+      hi: "Hi"
+      subject: "Account activation"
+      page_title: "Sample App"
+    password_reset:
+      hi: "Hi"
+      subject: "Account activation"
+      content: "find me in "

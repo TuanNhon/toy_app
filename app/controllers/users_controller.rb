@@ -6,10 +6,13 @@ class UsersController < ApplicationController
 
   def index
     @users = User.selected.ordered
-      .paginate page: params[:page], per_page: Settings.records
+      .paginate page: params[:page], per_page: Settings.user.records
   end
 
-  def show; end
+  def show
+    @microposts = @user.microposts
+      .paginate page: params[:page], per_page: Settings.micropost.records
+  end
 
   def new
     @user = User.new
@@ -43,6 +46,20 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def following
+    @title = t ".following"
+    @users = @user.following.paginate page: params[:page],
+      per_page: Settings.following.records
+    render "show_follow"
+  end
+
+  def followers
+    @title = t ".followers"
+    @users = @user.followers.paginate page: params[:page],
+      per_page: Settings.followers.records
+    render "show_follow"
+  end
+
   private
   def set_user
     unless @user = User.find_by(id: params[:id])
@@ -55,7 +72,7 @@ class UsersController < ApplicationController
     params.require(:user).permit :name, :email, :password,
       :password_confirmation
   end
-  
+
   def logged_in_user
     unless logged_in?
       store_location

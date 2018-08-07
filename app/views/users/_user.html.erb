@@ -5,5 +5,5 @@
 <%= link_to t(".action_edit"), edit_user_path(user) %>
 <% if current_user.admin? && !current_user?(user) %>
   | <%= link_to t(".action_delete"), user, method: :delete,
-    data: {confirm: t(".confirm_question")} %>
+    data: {confirm: t(".confirm_question")} %><br>
 <% end %>

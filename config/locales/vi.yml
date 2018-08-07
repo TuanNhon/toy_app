@@ -1,0 +1,148 @@
+vi:
+  layouts:
+    footer:
+      the: ""
+      by: "bởi"
+      title_page: "Hướng dẫn Ruby on Rails"
+      author: "Michael Hartl"
+      about_page: "Giới thiệu"
+      contact_page: "Liên hệ"
+      new_page: "Mới"
+    header:
+      sample: "ứng dụng mẫu"
+      home_page: "Trang chủ"
+      about_page: "Giới thiệu"
+      help_page: "Giúp đỡ"
+      contact_page: "Liên hệ"
+      users_page: "Người dùng"
+      account: "Tài khoản"
+      profile_page: "Hồ sơ"
+      setting_page: "Cài đặt"
+      logout_page: "Đăng xuất"
+      login_page: "Đăng nhập"
+  static_pages:
+    about:
+      the: ""
+      is_a: "là một"
+      title_page: "Giới thiệu"
+      ror_tuts: "Ruby on Rails Tutorial"
+      and: "và là"
+      ror: "Ruby on Rails"
+      book: "cuốn sách"
+      screencasts: "Sêri screencast"
+      rails_tuts_detail: "hướng dẫn nhà phát triển web với"
+      content: "Đây là một ứng dụng mẫu trong cuốn sách này"
+    contact:
+      title_page: "Liên hệ"
+      content: "Liên hệ với Ruby on Rails Tutorial về ứng dụng mẫu trong trang"
+      contact: "Liên hệ"
+    help:
+      title_page: "Trợ giúp"
+      intro: "Nhận sự trợ giúp từ Ruby on Rails Tutorial trong phần trợ giúp
+        của"
+      rails_help: "Rails Tutorial Help"
+      content: "Để nhận sự trợ giúp trong ứng dụng này, hãy xem cuốn sách"
+      ror_tuts: "Ruby on Rails Tutorial"
+      book: ""
+    home:
+      welcome: "Chào mừng đến với Ứng dụng mẫu"
+      intro: "Đây là trang chủ cho hướng dẫn"
+      ror_tuts: "Ruby on Rails"
+      content: "ứng dụng mẫu."
+      signup_page: "Đăng nhập ngay!"
+      logo: "Rails logo"
+  users:
+    welcome: "Chào mừng đến với dụng mẫu! Hãy kiểm tra hộp thư của bạn để kích
+      hoạt tài khoản."
+    success_update: "Người dùng đã cập nhật thành công."
+    success_destroy: "Đã xóa người dùng thành công."
+    login: "Mời bạn đăng nhập."
+    error_permission: "Bạn không thể thay đổi thông tin này"
+    updated: "Hồ sơ cá nhân cập nhật thành công"
+    deleted: "Đã xóa người dùng"
+    index:
+      title_page: "Người dùng"
+      name: "Tên"
+      email: "Địa chỉ Email"
+      action_create: "Thêm người dùng"
+      confirm_question: "Bạn chắc chắn chứ?"
+    edit:
+      title_page: "Chỉnh sửa người dùng"
+      btn_edit: "Lưu"
+      title: "Cập nhật thông tin"
+      change: "Thay đổi"
+    new:
+      title_page: "Đăng ký"
+      btn_signup: "Tạo tài khoản"
+      users_index: "Quay lại"
+    show:
+      label_name: "Tên"
+      label_email: "Địa chỉ Email"
+      users_index: "Quay lại"
+      action_edit: "Chỉnh sửa"
+      not_found: "Tài khoản không tồn tại"
+    form:
+      name: "Tên"
+      email: "Địa chỉ Email"
+      password: "Mật khẩu"
+      password_confirm: "Xác nhận mật khẩu"
+    form_edit:
+      btn_save: "Lưu các thay đổi"
+    user:
+      action_get: "Xem"
+      action_edit: "Sửa"
+      action_delete: "Xóa"
+      confirm_question: "Bạn chắc chắn chứ?"
+  shared:
+    error_messages:
+      error_begin: "Biểu mẫu chứa"
+      error_content: "lỗi"
+  sessions:
+    mess_danger: "Email/Mật khẩu không hợp lệ"
+    not_actived: "Tài khoản chưa được kích hoạt. Kiểm tra hộp thư email cho
+      đường dẫn kích hoạt tài khoản."
+    new:
+      title_page: "Đăng nhập"
+      email: "Địa chỉ Email"
+      password: "Mật khẩu"
+      remember_me: "Nhớ tôi"
+      login_page: "Đăng nhập"
+      is_member: "Người dùng mới"
+      signup_page: "Đăng nhập ngay!"
+      forgot_password: "(Quên mật khẩu)"
+  user_mailer:
+    account_activation:
+      hi: "Chào"
+      subject: "Kích hoạt tài khoản"
+      page_title: "Ứng dụng mẫu"
+      action_active: "Kích hoạt"
+      welcome:
+        text: "Chào mừng đến với Ứng dụng mẫu! Truy cập đường dẫn dưới đây để
+          kích hoạt tài khoản của bạn"
+        html: "Chào mừng đến với Ứng dụng mẫu! Nhấn vào đưòng dẫn bên dưới để
+          kích hoạt tài khoản của bạn"
+    password_reset:
+      title_page: "Đổi mật khẩu"
+      guide: "Để đổi mật khẩu của bạn nhấn vào đường dẫn sau:"
+      expire: "Đường dẫn này sẽ hết hạn trong hai giờ tới."
+      notyou_questionmark: "Nếu bạn không gửi yêu cầu thay đổi mật khẩu, 
+        hãy bỏ qua bức thư này và mật khẩu của bạn vẫn được giữ nguyên"
+      hi: "Chào"
+      subject: "Đổi mật khẩu"
+      content: "tìm tôi trong"
+  account_activations:
+    actived: "Tài khoản đã được kích hoạt"
+    invalid_link: "Đường dẫn kích hoạt không hợp lệ"
+  password_resets:
+    email_sent: "Đã gửi thư cùng với hướng dẫn thay đổi mật khẩu"
+    email_error: "Không tìm thấy địa chỉ email"
+    invalid_user: "Hãy kiểm tra hộp thư của bạn để kích hoạt tài khoản"
+    new:
+      title_page: "Quên mật khẩu"
+      email: "Hộp thư"
+      submit: "Gửi"
+    edit:
+      title_page: "Đổi mật khẩu"
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khẩu"
+      submit: "Cập nhật mật khẩu"
